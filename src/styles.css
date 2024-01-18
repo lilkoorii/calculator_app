@@ -1,0 +1,93 @@
+/*THEMES*/
+.theme-light {
+    --text-color: #FBFEFEff;
+    --equals-background-color: #249A8Eff;
+    --button-background-color: #0C4145ff;
+    --digit-background-color: #0B1517ff;
+    --calculator-background-color: #010A0Aff;
+}
+.theme-dark {
+    --text-color: #0F1110ff;
+    --equals-background-color: #249A8Eff;
+    --button-background-color: #C0EDEAff;
+    --digit-background-color: #F5F5F5ff;
+    --calculator-background-color: #FFFFFFff;
+}
+
+/*STYLES*/
+body{
+    background: var(--equals-background-color);
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Clear Sans", sans-serif;
+    font-weight: 300;
+    padding-top: 20px;
+}
+.calculator{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 490px;
+    padding: 20px;
+    border-radius: 25px;
+    flex-wrap: wrap;
+    background-color: var(--calculator-background-color);
+    box-shadow: 0px 0px 10px var(--digit-background-color);
+}
+#result{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    width: 100%;
+    height: 150px;
+    font-size: xxx-large;
+    color: var(--text-color);
+    padding: 0px 10px 10px 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.buttons-pad{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--button-background-color);
+    color: var(--text-color);
+    border: 0px;
+    border-radius: 150px;
+    font-size: larger;
+    font-family: "Clear Sans", sans-serif;
+    font-weight: 200;
+}
+button.digit{
+    background-color: var(--digit-background-color);
+}
+button.maths{
+    font-size: x-large;
+    padding: 15px 15px 20px 15px;
+}
+button#equals{
+    font-size: xx-large;
+    padding: 15px 15px 20px 15px;
+    width: 40%;
+    flex-grow: 2;
+    background-color: var(--equals-background-color);
+}
+#changeStyle{
+    width: 270px;
+    padding: 20px 45px;
+    font-weight: 400;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px var(--digit-background-color);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script>
+        const svgFavicon = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/></svg>`;
+
+        const blob = new Blob([svgFavicon], { type: 'image/svg+xml' });
+        const url = URL.createObjectURL(blob);
+
+        const favicon = document.createElement('link');
+        favicon.setAttribute('rel', 'icon');
+        favicon.setAttribute('type', 'image/svg+xml');
+        favicon.setAttribute('href', url);
+
+        document.head.appendChild(favicon);
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <div id="result">0</div>
+        <div class="buttons-pad">
+            <button id="clear">AC</button>
+            <button id="change">+/-</button>
+            <button class="operator percent">%</button>
+            <button class="operator">/</button>
+
+            <button class="digit operator">1</button>
+            <button class="digit operator">2</button>
+            <button class="digit operator">3</button>
+            <button class="operator maths">×</button>
+
+            <button class="digit operator">4</button>
+            <button class="digit operator">5</button>
+            <button class="digit operator">6</button>
+            <button class="operator maths">-</button>
+
+            <button class="digit operator">7</button>
+            <button class="digit operator">8</button>
+            <button class="digit operator">9</button>
+            <button class="operator maths">+</button>
+
+            <button class="digit operator">0</button>
+            <button class="digit operator  maths">.</button>
+            <button id="equals">=</button>
+        </div>
+    </div>
+    <button id="changeStyle">Поменять тему</button>
+</body>
+</html>
